@@ -4,15 +4,29 @@
 </p>
 
 # Team KENARGI Portfolio Webpage
-by Armando, Gigi, Kendra, Pod 3.3.5
+by Armando, Gigi, and Kendra in Pod 3.3.5
 
 ## Introduction
 
-Design and maintain a portfolio website for our open-source projects.
+Design a portfolio-blog
 
 ## Description
 
-Working as a team, we created a website to track our projects and accomplishments. 
+Working as a team, we created a portfolio website. The website uses dynamic links and is scaled for more projects or team memebers.
+
+## Visuals
+
+![page_1](https://user-images.githubusercontent.com/51943194/121791612-a9dd7180-cba0-11eb-999e-72593b7d76bc.png)
+
+![page_2](https://user-images.githubusercontent.com/51943194/121791614-af3abc00-cba0-11eb-9976-d6ecb0f0b7de.png)
+
+![page_3](https://user-images.githubusercontent.com/51943194/121791615-b19d1600-cba0-11eb-94d5-3d5ca7d3837a.png)
+
+## Pre-requisites / requirements
+
+- Python3
+- Flask 2.0.1
+- Virtual Environment (recommended)
 
 ## Technologies Used
 
@@ -49,6 +63,13 @@ $ export FLASK_ENV=development
 $ export URL=localhost:5000 
 $ flask run
 ```
+Start a web browser and type in localhost:5000, page will render and can be intereact like any other webpage.
+
+## Roadmap
+
+Soon to come
+- adding a comments
+
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
