@@ -1,3 +1,4 @@
+
 /*
 img.bg {
     background-image: url("/static/img/background.jpg") ;
@@ -9,7 +10,6 @@ img.bg {
 }
 
 */
-
 
 .h2-line {
     color: white;
@@ -37,8 +37,6 @@ section.cimg {
   background-position: center center;
 }
 
-  
-
 .text {
   text-align: center;
   position: absolute;
@@ -46,4 +44,4 @@ section.cimg {
   left: 50%;
   transform: translate(-50%, -50%);
   color: rgb(123, 211, 238);
-}
+
