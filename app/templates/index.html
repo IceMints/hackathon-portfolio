@@ -1,34 +1,13 @@
-{% include 'header.html' %}
+{% extends "base.html" %}
+{% block content %}
 <section class=section-index>
 <div class="text">
     <h1 style="font-size:50px">[  Welcome Message  ]</h1>
 </div>
 </section>
 
-
 <div class="nav-content profile">
     <h1></h1>
-    <h2 class="h2-line">My Portfolio</h2>
-</div>
-
-<section class="cimg">
-   
-    
-        {% for profile in profiles.values() %}
-            <figure class="card person-card">
-                <img src="{{ profile.image }}" alt="profile img" class="card-img-top">
-                <figcaption class="card-body">
-                    <a href="/profiles/{{ profile.name }}" class="stretched-link">
-                        <h5 class="card-title">{{ profile.name }}</h5>
-                    </a>
-                    <p class="card-text">{{ profile.location }} </p>
-                </figcaption>
-            </figure>
-        {% endfor %}
- 
-</section>
-
-<div class="nav-content profile">
     <h2 class="h2-line">Projects</h2>
 </div>
 
@@ -50,7 +29,24 @@
     </div>
 </section>
 
+<div class="nav-content profile">
+    <h2 class="h2-line">My Portfolio</h2>
+</div>
 
-
-{% include 'footer.html' %}
-
+<section class="cimg">
+   
+    
+        {% for profile in profiles.values() %}
+            <figure class="card person-card">
+                <img src="{{ profile.image }}" alt="profile img" class="card-img-top">
+                <figcaption class="card-body">
+                    <a href="/profiles/{{ profile.name }}" class="stretched-link">
+                        <h5 class="card-title">{{ profile.name }}</h5>
+                    </a>
+                    <p class="card-text">{{ profile.location }} </p>
+                </figcaption>
+            </figure>
+        {% endfor %}
+ 
+</section>
+{% endblock %}
