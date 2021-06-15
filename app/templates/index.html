@@ -1,28 +1,22 @@
 {% include 'header.html' %}
-
-<div class="profile">
-    <div class="profile-picture">
-        <img class="rounded-circle" src="/static/img/panturthawk.jpg" alt="Kenargi mascot">
-    </div>
-    <h1>Team Kenargi</h1>
+<section class=section-index>
+<div class="text">
+    <h1 style="font-size:50px">[  Welcome Message  ]</h1>
 </div>
-
-<section class="container home-section">
-    <h2>About Team Kenargi</h2>
-    <p>
-        Welcome to team Kenargi's portfolio. We are in the MLH Fellowship Production Engineering program (pod 3.3.5).
-        Our team name is "Kenargi", a made-up word derived from the letters of our names. Our team mascot is a
-        panda-turtle-hawk to represent that 3 people are better than one, especially when working on production projects!
-    </p>
 </section>
 
-<section class="container home-section">
-    <h2>Introducing the team members</h2>
 
-    <div class="grid-container">
+<div class="nav-content profile">
+    <h1></h1>
+    <h2 class="h2-line">My Portfolio</h2>
+</div>
+
+<section class="cimg">
+   
+    
         {% for profile in profiles.values() %}
             <figure class="card person-card">
-                <img src="{{ profile.image }}" alt="Kenargi Member" class="card-img-top">
+                <img src="{{ profile.image }}" alt="profile img" class="card-img-top">
                 <figcaption class="card-body">
                     <a href="/profiles/{{ profile.name }}" class="stretched-link">
                         <h5 class="card-title">{{ profile.name }}</h5>
@@ -31,17 +25,20 @@
                 </figcaption>
             </figure>
         {% endfor %}
-    </div>
+ 
 </section>
 
+<div class="nav-content profile">
+    <h2 class="h2-line">Projects</h2>
+</div>
 
 <section class="container home-section">
-    <h2>Projects</h2>
+    
 
     <div class="grid-container">
         {% for project in projects.values() %}
             <figure class="card person-card">
-                <img src="{{ project.image }}" alt="Kenargi Project" class="card-img-top">
+                <img src="{{ project.image }}" alt="project img" class="card-img-top">
                 <figcaption class="card-body">
                     <a href="/projects/{{ project.name }}" class="stretched-link">
                         <h5 class="card-title">{{ project.name }}</h5>
@@ -52,6 +49,7 @@
         {% endfor %}
     </div>
 </section>
+
 
 
 {% include 'footer.html' %}
