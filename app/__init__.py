@@ -3,7 +3,7 @@ import os
 from dotenv import load_dotenv
 from flask import Flask, render_template, abort
 
-from data.load_data import load_projects, load_profiles
+from app.load_data import load_projects, load_profiles
 
 load_dotenv()
 app = Flask(__name__)
