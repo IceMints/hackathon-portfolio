@@ -32,10 +32,10 @@ section.cimg {
   max-width: none;
   background-color: #c8d6da;
   height: 100vh;
-    background-image:url("/static/img/background.jpg");
+    background-image:url("/static/img/3d_earth.jpg");
     background-repeat:no-repeat;
   background-size: cover;
-  background-attachment: fixed;
+  background-attachment: local;
   background-position: center center;
 }
 
@@ -46,7 +46,7 @@ section.cimg {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: rgb(123, 211, 238);
+  color: #ffffff;
 }
 
 
