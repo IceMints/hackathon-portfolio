@@ -1,19 +1,5 @@
-/*
-img.bg {
-    background-image: url("/static/img/background.jpg") ;
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-    background-color: #000000;
-}
-
-*/
-
-
 .h2-line {
     color: white;
-
 }
 
 section.cimg {
@@ -36,9 +22,7 @@ section.cimg {
   background-attachment: fixed;
   background-position: center center;
 }
-
   
-
 .text {
   text-align: center;
   position: absolute;
