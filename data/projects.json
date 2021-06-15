@@ -1,10 +1,10 @@
 {
   "items": [
     {
-      "name": "Portfolio Project",
+      "name": "Project 1",
       "id": 1,
       "image": "/static/img/project1.png",
-      "description": "Our first team project - A portfolio website blog",
+      "description": "My first project",
       "tools": [
         "Python",
         "Flask",
@@ -14,9 +14,21 @@
       ],
       "link": "www.google.com",
       "source": "https://github.com/kendrajmoore/hackathon-portfolio"
+    },
+    {
+      "name": "Project 2",
+      "id": 2,
+      "image": "/static/img/friends.jpg",
+      "description": "My second project",
+      "tools": [
+        "Python",
+        "Flask",
+        "HTML",
+        "CSS",
+        "JSON"
+      ],
+      "link": "www.google.com",
+      "source": "https://github.com/"
     }
   ]
 }
-
-
-
