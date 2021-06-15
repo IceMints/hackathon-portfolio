@@ -1,5 +1,24 @@
 {% extends "base.html" %}
+
+
 {% block content %}
+<header class="nav-bar">
+    <div class="nav-content">
+      
+            <div class="nav-logo">
+                <img src="/static/img/logo.svg" alt="logo"/>
+                <ul class="ul_nav">            
+                    <li ><a href="/">Home</a></li>
+                    <li ><a href="#section_2">Projects</a></li>
+                    <li ><a href="/">Blog</a></li>
+                    <li ><a href="#section_3">Portfolio</a></li>
+                </ul> 
+            </div>
+       
+    </div>
+</header>
+
+
 <section class=section-index>
 <div class="text">
     <h1 style="font-size:50px">[  Welcome Message  ]</h1>
@@ -11,7 +30,7 @@
     <h2 class="h2-line">Projects</h2>
 </div>
 
-<section class="container home-section">
+<section id="section_2" class="container home-section">
     
 
     <div class="grid-container">
@@ -33,7 +52,7 @@
     <h2 class="h2-line">My Portfolio</h2>
 </div>
 
-<section class="cimg">
+<section id="section_3" class="cimg">
    
     
         {% for profile in profiles.values() %}
