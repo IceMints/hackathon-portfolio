@@ -12,11 +12,11 @@ Design a portfolio-blog
 
 ## Description
 
-Working as a team, we created a portfolio website. The website uses dynamic links and is scaled for more projects or team memebers.
+Working as a team, we created a portfolio website using Flask, FlatPages and Frozen. The website uses dynamic links and is scaled for more projects or team memebers.
 
 ## Visuals
 
-![page_1](https://user-images.githubusercontent.com/51943194/121791612-a9dd7180-cba0-11eb-999e-72593b7d76bc.png)
+![page_1](https://user-images.githubusercontent.com/51943194/122249182-7d19aa80-ce7d-11eb-8ef4-1cdb207cf13c.png)
 
 ![page_2](https://user-images.githubusercontent.com/51943194/121791614-af3abc00-cba0-11eb-9976-d6ecb0f0b7de.png)
 
@@ -26,6 +26,8 @@ Working as a team, we created a portfolio website. The website uses dynamic link
 
 - Python3
 - Flask 2.0.1
+- Flask-FlatPages 0.7.1
+- Frozen-Flask 0.15
 - Virtual Environment (recommended)
 
 ## Technologies Used
