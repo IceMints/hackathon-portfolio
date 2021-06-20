@@ -1,10 +1,10 @@
 {
   "items": [
     {
-      "name": "Project 1",
+      "name": "Portfolio",
       "id": 1,
       "image": "/static/img/project1.png",
-      "description": "My first project",
+      "description": "website portfolio project",
       "tools": [
         "Python",
         "Flask",
@@ -12,11 +12,11 @@
         "CSS",
         "JSON"
       ],
-      "link": "www.google.com",
+      "link": "weepingmelon.duckdns.org",
       "source": "https://github.com/kendrajmoore/hackathon-portfolio"
     },
     {
-      "name": "Project 2",
+      "name": "TBD",
       "id": 2,
       "image": "/static/img/friends.jpg",
       "description": "My second project",
