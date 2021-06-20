@@ -4,11 +4,15 @@ click==8.0.1
 distlib==0.3.2
 filelock==3.0.12
 Flask==2.0.1
+Flask-FlatPages==0.7.1
+Frozen-Flask==0.15
 gunicorn==20.1.0
 itsdangerous==2.0.1
 Jinja2==3.0.1
+Markdown==3.3.4
 MarkupSafe==2.0.1
 python-dotenv==0.17.1
+PyYAML==5.3
 six==1.16.0
 virtualenv==20.4.7
 Werkzeug==2.0.1
