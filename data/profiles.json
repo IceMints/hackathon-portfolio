@@ -1,24 +1,23 @@
 {
   "items": [
     {
-      "name": "First and Last Name",
+      "name": "Gigi",
       "id": 1,
-      "location": "State, Country",
-      "image": "/static/img/logo.jpg",
-      "aboutMe": "Summary and Description",
+      "location": "Los Angeles, California",
+      "image": "/static/img/portrait.png",
+      "aboutMe": "Hi Everyone! My name is Gigi from Los Angeles, California. I'm in the fellowship program learning about production engineering. I come from an information technology background.",
       "tools": [
-        "Tools of the trade",
-        "Some Programming Language",
-        "Some scripting Language"
+        "Python",
+        "Java",
+        "C#"
       ],
       "hobbies": [
-        "Programming",
-        "Sample",
-        "Sample",
-        "Sample"
+        "Art",
+        "Cycling",
+        "Puzzles"
       ],
-      "github": "https://github.com/armandouv",
-      "linkedin": "https://www.linkedin.com/in/armandouv/"
+      "github": "https://github.com/IceMints/portfolio-blog",
+      "linkedin": "https://www.linkedin.com/in/gigi-hui/"
     }
    
     

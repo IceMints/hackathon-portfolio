@@ -12,13 +12,10 @@ profiles_base_url = base_url + "/profiles/"
 projects = load_projects()
 profiles = load_profiles()
 
-@app.route('/test')
-def test():
-    return render_template('test.html')
-
+@app.route('/index')
 @app.route('/')
 def index():
-    return render_template('index.html', profiles=profiles, projects=projects, title="Team Kenargi's portfolio",
+    return render_template('index.html', profiles=profiles, projects=projects, title="Portfolio",
                            url=base_url)
 
 
