@@ -12,7 +12,6 @@ profiles_base_url = base_url + "/profiles/"
 projects = load_projects()
 profiles = load_profiles()
 
-@app.route('/index')
 @app.route('/')
 def index():
     return render_template('index.html', profiles=profiles, projects=projects, title="Portfolio",
@@ -40,4 +39,4 @@ def page_not_found(e):
 
 @app.route('/health')
 def health():
-    return ''
+    return '', 200
