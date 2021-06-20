@@ -5,7 +5,7 @@
       "id": 1,
       "location": "Los Angeles, California",
       "image": "/static/img/portrait.png",
-      "aboutMe": "Hi Everyone! My name is Gigi from Los Angeles, California. I'm in the fellowship program learning about production engineering. I come from an information technology background.",
+      "aboutMe": "Hello! My name is Gigi from Los Angeles, California. I'm in the fellowship program learning about production engineering. I come from an information technology background.",
       "tools": [
         "Python",
         "Java",

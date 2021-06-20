@@ -1,9 +1,20 @@
 import os
 
-from flask import Flask, render_template, abort
+from flask import Flask, render_template, abort, url_for
+from flask_flatpages import FlatPages
+from flask_frozen import Freezer
+
+# loads the data files
 from app.load_data import load_projects, load_profiles
 
+DEBUG = True
+FLATPAGES_AUTO_RELOAD = DEBUG
+FLATPAGES_EXTENSION = '.md'
+
 app = Flask(__name__)
+app.config.from_object(__name__)
+pages = FlatPages(app)
+freezer = Freezer(app)
 
 base_url = os.getenv("URL")
 projects_base_url = base_url + "/projects/"
@@ -16,7 +27,6 @@ profiles = load_profiles()
 def index():
     return render_template('index.html', profiles=profiles, projects=projects, title="Portfolio",
                            url=base_url)
-
 
 @app.route('/projects/<name>')
 def get_project(name):
@@ -32,6 +42,14 @@ def get_profile(name):
     title = name + "'s Profile"
     return render_template('profile.html', item=profiles[name], title=title, url=profiles_base_url + name)
 
+@app.route('/blog')
+def blog():
+    return render_template('blog.html', pages=pages, title="Blog")
+
+@app.route('/<path:path>.html')
+def page(path):
+    page = pages.get_or_404(path)
+    return render_template('page.html', page=page, title="Blog")
 
 @app.errorhandler(404)
 def page_not_found(e):
