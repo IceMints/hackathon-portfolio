@@ -1,11 +1,8 @@
 import os
 
-from dotenv import load_dotenv
 from flask import Flask, render_template, abort
-
 from app.load_data import load_projects, load_profiles
 
-load_dotenv()
 app = Flask(__name__)
 
 base_url = os.getenv("URL")
@@ -43,3 +40,7 @@ def get_profile(name):
 @app.errorhandler(404)
 def page_not_found(e):
     return render_template('404.html', title="Page not found"), 404
+
+@app.route('/health')
+def health():
+    return ''
