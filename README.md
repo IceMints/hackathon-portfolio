@@ -18,9 +18,9 @@ Working as a team, we created a portfolio website using Flask, FlatPages and Fro
 
 ![Screenshot_2021-06-19_23-06-36](https://user-images.githubusercontent.com/51943194/122663966-36fd6900-d153-11eb-95f5-8de33304a87f.png)
 
-![page_2](https://user-images.githubusercontent.com/51943194/121791614-af3abc00-cba0-11eb-9976-d6ecb0f0b7de.png)
-
 ![page_3](https://user-images.githubusercontent.com/51943194/121791615-b19d1600-cba0-11eb-94d5-3d5ca7d3837a.png)
+
+![page_2](https://user-images.githubusercontent.com/51943194/121791614-af3abc00-cba0-11eb-9976-d6ecb0f0b7de.png)
 
 ## Pre-requisites / requirements
 
