@@ -40,4 +40,4 @@ def page_not_found(e):
 
 @app.route('/health')
 def health():
-    return ''
+    return '', 200
