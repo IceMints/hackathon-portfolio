@@ -5,7 +5,7 @@
 
 .h1-title {
   color: rgb(255, 255, 255);
-  font-family: 'cursive', serif;
+  font-family: 'cursive';
   font-size:50px;
   position:absolute;
   width:450px;
@@ -70,7 +70,6 @@ section.cimg {
   display: inline;
   padding: 8px;
   background-color: #000000;
-  text-transform: uppercase;
   font-size: 20px;
   font-family: 'Raleway', sans-serif;
   font-weight: 600;
