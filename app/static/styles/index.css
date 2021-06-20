@@ -1,22 +1,10 @@
-
-/*
-img.bg {
-    background-image: url("/static/img/background.jpg") ;
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-    background-color: #000000;
-}
-*/
-
 /* Changing h2 text into white text */
 .h2-line {
     color: white;
 
 }
 
-/* centering the container with picture */
+/* centering the container in profile picture */
 section.cimg {
     margin-left: auto;
     margin-right: auto;
@@ -32,7 +20,7 @@ section.cimg {
   max-width: none;
   background-color: #c8d6da;
   height: 100vh;
-    background-image:url("/static/img/3d_earth.jpg");
+    background-image:url("/static/img/background.jpg");
     background-repeat:no-repeat;
   background-size: cover;
   background-attachment: local;
@@ -59,7 +47,7 @@ section.cimg {
   overflow: hidden;
   /*
   border: 2x solid #d806bc;
-  extends background into a bar 
+  extends button background into a bar 
   background-color: #ffffff; */
   position: fix;
   width: 100%;
@@ -75,7 +63,7 @@ section.cimg {
   padding: 8px;
   background-color: #000000;
   text-transform: uppercase;
-  font-size: 12px;
+  font-size: 20px;
   font-family: 'Raleway', sans-serif;
   font-weight: 600;
 
