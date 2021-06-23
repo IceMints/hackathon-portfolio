@@ -13,6 +13,7 @@ Markdown==3.3.4
 MarkupSafe==2.0.1
 python-dotenv==0.17.1
 PyYAML==5.3
+requests==2.20.0
 six==1.16.0
 virtualenv==20.4.7
 Werkzeug==2.0.1

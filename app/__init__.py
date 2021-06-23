@@ -1,6 +1,6 @@
 import os
 
-from flask import Flask, render_template, abort, url_for
+from flask import Flask, render_template, abort, url_for, request
 from flask_flatpages import FlatPages
 from flask_frozen import Freezer
 
