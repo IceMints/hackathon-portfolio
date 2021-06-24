@@ -4,3 +4,5 @@ __pycache__
 .env
 .idea
 /python3-virtualenv
+wsgi.py
+.sqlite

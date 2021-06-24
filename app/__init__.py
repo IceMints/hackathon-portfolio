@@ -7,16 +7,23 @@ from flask_frozen import Freezer
 # loads the data files
 from app.load_data import load_projects, load_profiles
 
+from . import db
+
 DEBUG = True
 FLATPAGES_AUTO_RELOAD = DEBUG
 FLATPAGES_EXTENSION = '.md'
 
 app = Flask(__name__)
 app.config.from_object(__name__)
+app.config['DATABASE'] = os.path.join(os.getcwd(), 'flask.sqlite')
+db.init_app(app) # calls the function init_app from db.py
+
 pages = FlatPages(app)
 freezer = Freezer(app)
 
 base_url = os.getenv("URL")
+projects_base_url = base_url + "/projects/"
+profiles_base_url = base_url + "/profiles/"
 
 projects = load_projects()
 profiles = load_profiles()
@@ -30,7 +37,7 @@ def index():
 def get_project(name):
     if name not in projects:
         return abort(404)
-    return render_template('project.html', item=projects[name], title=name, url=base_url)
+    return render_template('project.html', item=projects[name], title=name, url=projects_base_url + name)
 
 
 @app.route('/profiles/<name>')
@@ -38,7 +45,7 @@ def get_profile(name):
     if name not in profiles:
         return abort(404)
     title = name + "'s Profile"
-    return render_template('profile.html', item=profiles[name], title=title, url=base_url)
+    return render_template('profile.html', item=profiles[name], title=title, url=profiles_base_url + name)
 
 @app.route('/blog')
 def blog():
