@@ -24,11 +24,11 @@ Working as a team, we created a portfolio website using Flask, FlatPages and Fro
 
 ## Pre-requisites / requirements
 
-- Python3
-- Flask 2.0.1
-- Flask-FlatPages 0.7.1
-- Frozen-Flask 0.15
-- Virtual Environment (recommended)
+- Use the package manager [pip](https://pip.pypa.io/en/stable/) to install all dependencies
+
+```bash
+pip install -r requirements.txt
+```
 
 ## Technologies Used
 
@@ -48,12 +48,6 @@ $ python -m venv python3-virtualenv
 $ source python3-virtualenv/bin/activate
 ```
 
-Use the package manager [pip](https://pip.pypa.io/en/stable/) to install all dependencies
-
-```bash
-pip install -r requirements.txt
-```
-
 ## Usage
 
 Create a .env file using the example.env template
@@ -66,11 +60,6 @@ $ export URL=localhost:5000
 $ flask run
 ```
 Start a web browser and type in localhost:5000, page will render and can be intereact like any other webpage.
-
-## Roadmap
-
-Soon to come
-- adding a comments
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.

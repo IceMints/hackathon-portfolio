@@ -8,6 +8,7 @@ from werkzeug.security import generate_password_hash, check_password_hash
 # loads the data files
 from app.load_data import load_projects, load_profiles
 from . import db
+from app.db import get_db
 
 DEBUG = True
 FLATPAGES_AUTO_RELOAD = DEBUG
@@ -74,16 +75,13 @@ def register():
         
         if error is None:
             db.execute(
-                'INSERT INTO user (username, password) VALUES (?, ?)',
-                (username, generate_password_hash(password))
-            )
+                'INSERT INTO user (username, password) VALUES (?, ?)',(username, generate_password_hash(password)))
             db.commit()
             return f"User {username} created successfully"
         else:
             return error, 418
 
-    ## TODO: Return a register page
-    return "Register Page not yet implemented", 501
+    return render_template('register.html', title='Register')
         
 @app.route('/login', methods=['GET', 'POST'])
 def login():
@@ -95,17 +93,20 @@ def login():
         user = db.execute(
             'SELECT * FROM user WHERE username = ?', (username,)).fetchone()
             
-            if user is None:
-                error = 'Incorrect username.'
-            elif not check_password_hash(user['password'], password):
-                error = 'Incorrect password.'
+        if user is None:
+            error = 'Incorrect username.'
+        elif not check_password_hash(user['password'], password):
+            error = 'Incorrect password.'
 
-            if error is None:
-                return "Login Successful", 200
-            else:
-                return error, 418
-    ## TODO: Return a login page
-    return "Login Page not yet implemented", 501
+        if error is None:
+            return "Login Successful", 200
+        else:
+            return error, 418
+    return render_template('login.html', title='Login')
+
+@app.route('/<username>/home')
+def home(username):
+    return render_template('userhome.html', title=username)
 
 @app.errorhandler(404)
 def page_not_found(e):
