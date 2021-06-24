@@ -7,12 +7,17 @@ from flask_frozen import Freezer
 # loads the data files
 from app.load_data import load_projects, load_profiles
 
+from . import db
+
 DEBUG = True
 FLATPAGES_AUTO_RELOAD = DEBUG
 FLATPAGES_EXTENSION = '.md'
 
 app = Flask(__name__)
 app.config.from_object(__name__)
+app.config['DATABASE'] = os.path.join(os.getcwd(), 'flask.sqlite')
+db.init_app(app) # calls the function init_app from db.py
+
 pages = FlatPages(app)
 freezer = Freezer(app)
 
