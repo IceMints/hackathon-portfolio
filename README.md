@@ -24,11 +24,11 @@ Working as a team, we created a portfolio website using Flask, FlatPages and Fro
 
 ## Pre-requisites / requirements
 
-- Python3
-- Flask 2.0.1
-- Flask-FlatPages 0.7.1
-- Frozen-Flask 0.15
-- Virtual Environment (recommended)
+- Use the package manager [pip](https://pip.pypa.io/en/stable/) to install all dependencies
+
+```bash
+pip install -r requirements.txt
+```
 
 ## Technologies Used
 
@@ -47,12 +47,6 @@ Create and activate virtual environment using virtualenv
 ```bash
 $ python -m venv python3-virtualenv
 $ source python3-virtualenv/bin/activate
-```
-
-Use the package manager [pip](https://pip.pypa.io/en/stable/) to install all dependencies
-
-```bash
-pip install -r requirements.txt
 ```
 
 ## Usage

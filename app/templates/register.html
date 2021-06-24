@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% include "nav.html" %}
+{% block content %}
+
+<h1>Sign-up</h1>
+<form method="POST">
+<p>
+<label for="username">username: </label>
+<input type="text" name="username">
+</p>
+<p>
+<label for="password">password: </label>
+<input type="password" name="password">
+</p>
+
+<p>
+<input type="submit" value="Register">
+</p>
+</form>
+
+{% endblock %}
