@@ -36,6 +36,7 @@ Working as a team, we created a portfolio website using Flask, FlatPages and Fro
 - HTML
 - CSS
 - JSON
+- sqlite
 
 ## Installation
 
@@ -65,11 +66,6 @@ $ export FLASK_ENV=development
 $ flask run
 ```
 Start a web browser and type in localhost:5000, page will render and can be intereact like any other webpage.
-
-## Roadmap
-
-Soon to come
-- adding a comments
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
