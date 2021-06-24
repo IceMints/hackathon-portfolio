@@ -6,7 +6,6 @@ from flask_frozen import Freezer
 
 # loads the data files
 from app.load_data import load_projects, load_profiles
-
 from . import db
 
 DEBUG = True
