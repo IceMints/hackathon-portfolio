@@ -92,16 +92,17 @@ def login():
         error = None
         user = db.execute(
             'SELECT * FROM user WHERE username = ?', (username,)).fetchone()
-            
-        if user is None:
-            error = 'Incorrect username.'
-        elif not check_password_hash(user['password'], password):
-            error = 'Incorrect password.'
-
-        if error is None:
-            return "Login Successful", 200
-        else:
-            return error, 418
+        try:
+            if user is None:
+                error = 'Incorrect username.'
+            elif not check_password_hash(user['password'], password):
+                error = 'Incorrect password.'
+            if error is None:
+                return "Login Successful", 200
+            else:
+                return error, 418
+        except:
+            return 'Incorrect password.'
     return render_template('login.html', title='Login')
 
 @app.route('/<username>/home')
