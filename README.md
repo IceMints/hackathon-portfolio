@@ -41,9 +41,6 @@ pip install -r requirements.txt
 - CSS
 - JSON
 - sqlite
-- AWS instance
-- NGINX
-- Docker
 
 
 ## Installation
