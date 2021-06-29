@@ -45,6 +45,7 @@ pip install -r requirements.txt
 - NGINX
 - Docker
 
+
 ## Installation
 
 Make sure you have python3 and pip installed
