@@ -13,7 +13,7 @@
         "JSON"
       ],
       "link": "weepingmelon.duckdns.org",
-      "source": "https://github.com/kendrajmoore/hackathon-portfolio"
+      "source": "https://github.com/IceMints/portfolio-blog"
     },
     {
       "name": "TBD",
@@ -21,11 +21,11 @@
       "image": "/static/img/friends.jpg",
       "description": "My second project",
       "tools": [
-        "Python",
-        "Flask",
-        "HTML",
-        "CSS",
-        "JSON"
+        "-",
+        "-",
+        "-",
+        "-",
+        "-"
       ],
       "link": "www.google.com",
       "source": "https://github.com/"
