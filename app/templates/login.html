@@ -1,28 +1,28 @@
 {% extends "base.html" %}
 
 {% block content %}
-
+<div class="login">
 <h1>Welcome!!!</h1>
 
 <form method="POST">
-<div class="form-floating mb-3">
+
     <p>    
         <label for="username">username: </label>
         <input type="text" name="username" placeholder="Your username...">
     </p>
-</div>
-<p>
-<label for="password">password: </label>
-<input type="password" name="password" placeholder="Your password...">
-</p>
 
-<p>
-<input type="submit" value="Login">
-</p>
+    <p>
+    <label for="password">password: </label>
+    <input type="password" name="password" placeholder="Your password...">
+    </p>
+
+    <p>
+    <input type="submit" value="Login">
+    </p>
 </form>
-<p>Don't have an account? <a href={{ url_for('register') }}>
-    Sign-up!
-</a></p>
+    <p>Don't have an account? <a href={{ url_for('register') }}>
+    Sign-up!</a></p>
+</div>
 
 
 {% endblock %}
