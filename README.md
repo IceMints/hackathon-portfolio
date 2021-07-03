@@ -12,9 +12,9 @@ Design a portfolio-blog
 
 ## Description
 
-Working as a team, we created a portfolio website using Flask. The website uses dynamic links and is scaled for more projects and team memebers.
-After forking the project, I added Flask FlatPages and Frozen to include a blog section. Then deployed the website as a service with AWS
-instance in docker containers.
+Working as a team, we created a portfolio website using Flask. The website uses dynamic links and is scaled for more projects and team memebers.<br>
+After forking the project, a blog is added with Flask FlatPages and Frozen. The website is then deployed as a service in an AWS
+instance with docker containers.
 
 ## Visuals 
 (updated 6/19/2021)
