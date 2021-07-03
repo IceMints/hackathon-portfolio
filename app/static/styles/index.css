@@ -84,7 +84,7 @@ section.cimg {
 /* Centers the blog pages */
 .center {
   margin: auto;
-  width: 60%;
+  width: 50%;
   border: 3px ;
   padding: 10px;
 }
@@ -92,7 +92,7 @@ section.cimg {
 /* login and register styling */
 .login {
   margin: auto;
-  width: 50%;
+  width: 40%;
   border-radius: 5px ;
   padding: 20px;
 }
