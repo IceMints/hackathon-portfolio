@@ -16,7 +16,8 @@ Working as a team, we created a portfolio website using Flask. The website uses 
 After forking the project, I added Flask FlatPages and Frozen to include a blog section. Then I deployed the website as a service with an AWS
 instance in a docker container.
 
-## Visuals (updated 6/19/2021)
+## Visuals 
+(updated 6/19/2021)
 
 ![Screenshot_2021-06-19_23-06-36](https://user-images.githubusercontent.com/51943194/122663966-36fd6900-d153-11eb-95f5-8de33304a87f.png)
 
