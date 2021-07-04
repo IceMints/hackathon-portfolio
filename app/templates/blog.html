@@ -2,15 +2,17 @@
 
 {% block content %}
 
-<h1><center> Welcome to my blog! </center> </h1>
+<h1>
+  <center> Welcome to my blog! </center>
+</h1>
 
 
 <table border="2px" align='center'>
   <thead>
-  <tr>
-    <td> Title </td>
-    <td> Link </td>
-  </tr>
+    <tr>
+      <td> Title </td>
+      <td> Link </td>
+    </tr>
   </thead>
 
   {% for page in pages %}
@@ -22,6 +24,7 @@
 </table>
 <hr>
 <div class="button-container" align='center'>
-  <a class="btn btn-outline-primary" href="/" role="button"><i class="bi bi-arrow-return-left"></i>&nbsp;&nbsp; Back </a>
+  <a class="btn btn-outline-primary" href="/" role="button"><i class="bi bi-arrow-return-left"></i>&nbsp;&nbsp; Back
+  </a>
 </div>
 {% endblock %}
