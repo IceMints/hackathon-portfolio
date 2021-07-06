@@ -5,11 +5,11 @@
 
 .h1-title {
   color: rgb(255, 255, 255);
-  font-family: 'cursive';
-  font-size:50px;
-  position:absolute;
-  width:450px;
-  height:100px;
+  font-family: "cursive", Arial, Sans-Serif;
+  font-size:2em;
+  position:right;
+  width:25rem;
+  height:2rem;
 }
 
 /* centering the container in profile picture */
@@ -39,8 +39,8 @@ section.cimg {
 .text {
   text-align: center;
   position: absolute;
-  top: 30%;
-  left: 58%;
+  top: 45%;
+  left: 70%;
   transform: translate(-50%, -50%);
   color: #ffffff;
 }
@@ -80,3 +80,56 @@ section.cimg {
 .ul_nav li a:hover {
   background-color:#f0b209ea;
 }
+
+/* Centers the blog pages */
+.center {
+  margin: auto;
+  width: 50%;
+  border: 3px ;
+  padding: 10px;
+}
+
+/* login and register styling */
+.login {
+  margin: auto;
+  width: 40%;
+  border-radius: 5px ;
+  padding: 20px;
+}
+
+input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=password], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  width: 100%;
+  background-color: #f5ae43;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #feb945;
+
+}
+

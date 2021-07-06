@@ -3,7 +3,7 @@
  <img width="460" src="https://user-images.githubusercontent.com/51943194/121562739-98dd0680-c9ce-11eb-897a-579780e50c9a.jpg">
 </p>
 
-# Team KENARGI Portfolio Webpage
+# Sourced from Team KENARGI Portfolio Webpage
 by Armando, Gigi, and Kendra in Pod 3.3.5
 
 ## Introduction
@@ -12,9 +12,12 @@ Design a portfolio-blog
 
 ## Description
 
-Working as a team, we created a portfolio website using Flask, FlatPages and Frozen. The website uses dynamic links and is scaled for more projects or team memebers.
+Working as a team, we created a portfolio website using Flask. The website uses dynamic links and is scaled for more projects and team memebers.<br>
+After forking the project, a blog is added with Flask FlatPages and Frozen. The website is then deployed as a service in an AWS
+instance with docker containers.
 
-## Visuals
+## Visuals 
+(updated 6/19/2021)
 
 ![Screenshot_2021-06-19_23-06-36](https://user-images.githubusercontent.com/51943194/122663966-36fd6900-d153-11eb-95f5-8de33304a87f.png)
 
@@ -24,18 +27,22 @@ Working as a team, we created a portfolio website using Flask, FlatPages and Fro
 
 ## Pre-requisites / requirements
 
-- Python3
-- Flask 2.0.1
-- Flask-FlatPages 0.7.1
-- Frozen-Flask 0.15
-- Virtual Environment (recommended)
+- Use the package manager [pip](https://pip.pypa.io/en/stable/) to install all dependencies
+
+```bash
+pip install -r requirements.txt
+```
 
 ## Technologies Used
 
 - Python-Flask
+- Flatpages
+- Frozen
 - HTML
 - CSS
 - JSON
+- sqlite
+
 
 ## Installation
 
@@ -46,12 +53,6 @@ Create and activate virtual environment using virtualenv
 ```bash
 $ python -m venv python3-virtualenv
 $ source python3-virtualenv/bin/activate
-```
-
-Use the package manager [pip](https://pip.pypa.io/en/stable/) to install all dependencies
-
-```bash
-pip install -r requirements.txt
 ```
 
 ## Usage
@@ -65,11 +66,6 @@ $ export FLASK_ENV=development
 $ flask run
 ```
 Start a web browser and type in localhost:5000, page will render and can be intereact like any other webpage.
-
-## Roadmap
-
-Soon to come
-- adding a comments
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.

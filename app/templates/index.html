@@ -1,30 +1,12 @@
 {% extends "base.html" %}
 
-
 {% block content %}
-<header class="nav-bar">
-    <div class="nav-content">
-      
-            <div class="nav-logo">
-                <a href="/">
-                <img src="/static/img/logo.svg" alt="logo"/>
-                </a>
-                <ul class="ul_nav">            
-                    <li ><a href="/">Home</a></li>
-                    <li ><a href="#Projects">Projects</a></li>
-                    <li ><a href="#About">About</a></li>
-                    <li ><a href="/blog">Blog</a></li>
-                </ul> 
-            </div>
-       
-    </div>
-</header>
-
 
 <section class=section-index>
-<div class="text">
-    <h1 class= "h1-title"> " The key to realizing a dream is to focus not on success but significance, and then even the small steps and little victories along your path will take on greater meaning. " --Oprah Winfrey  </h1>
-</div>
+    <div class="text">
+        <h1 class="h1-title"> " The key to realizing a dream is to focus not on success but significance, and then even
+            the small steps and little victories along your path will take on greater meaning. " --Oprah Winfrey </h1>
+    </div>
 </section>
 
 <div class="nav-content profile">
@@ -33,19 +15,19 @@
 </div>
 
 <section id="Projects" class="container home-section">
-    
+
 
     <div class="grid-container">
         {% for project in projects.values() %}
-            <figure class="card person-card">
-                <img src="{{ project.image }}" alt="project img" class="card-img-top">
-                <figcaption class="card-body">
-                    <a href="/projects/{{ project.name }}" class="stretched-link">
-                        <h5 class="card-title">{{ project.name }}</h5>
-                    </a>
-                    <p class="card-text">{{ project.description }}</p>
-                </figcaption>
-            </figure>
+        <figure class="card person-card">
+            <img src="{{ project.image }}" alt="project img" class="card-img-top">
+            <figcaption class="card-body">
+                <a href="/projects/{{ project.name }}" class="stretched-link">
+                    <h5 class="card-title">{{ project.name }}</h5>
+                </a>
+                <p class="card-text">{{ project.description }}</p>
+            </figcaption>
+        </figure>
         {% endfor %}
     </div>
 </section>
@@ -55,19 +37,19 @@
 </div>
 
 <section id="About" class="cimg">
-   
-    
-        {% for profile in profiles.values() %}
-            <figure class="card person-card">
-                <img src="{{ profile.image }}" alt="profile img" class="card-img-top">
-                <figcaption class="card-body">
-                    <a href="/profiles/{{ profile.name }}" class="stretched-link">
-                        <h5 class="card-title">{{ profile.name }}</h5>
-                    </a>
-                    <p class="card-text">{{ profile.location }} </p>
-                </figcaption>
-            </figure>
-        {% endfor %}
- 
+
+
+    {% for profile in profiles.values() %}
+    <figure class="card person-card">
+        <img src="{{ profile.image }}" alt="profile img" class="card-img-top">
+        <figcaption class="card-body">
+            <a href="/profiles/{{ profile.name }}" class="stretched-link">
+                <h5 class="card-title">{{ profile.name }}</h5>
+            </a>
+            <p class="card-text">{{ profile.location }} </p>
+        </figcaption>
+    </figure>
+    {% endfor %}
+
 </section>
 {% endblock %}

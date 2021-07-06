@@ -1,12 +1,14 @@
 {% extends "base.html" %}
-{% include 'nav.html' %}
-{% block content %}
 
-<h1> {{ page.title }} </h1>
-<small> Published on {{ page.date.strftime('%A, %B  %d, %Y') }} </small>
-<hr>
-{{ page.html|safe }}
-<div class="button-container">
-    <a class="btn btn-outline-primary" href="/blog" role="button"><i class="bi bi-arrow-return-left"></i>&nbsp;&nbsp;Back</a>
+{% block content %}
+<div class="center">
+    <h1> {{ page.title }} </h1>
+    <small> Published on {{ page.date.strftime('%A, %B %d, %Y') }} </small>
+    <hr>
+    {{ page.html|safe }}
+    <div class="button-container">
+        <a class="btn btn-outline-primary" href="/blog" role="button"><i
+                class="bi bi-arrow-return-left"></i>&nbsp;&nbsp;Back</a>
+    </div>
 </div>
 {% endblock %}
