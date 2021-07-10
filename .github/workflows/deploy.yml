@@ -40,7 +40,7 @@ jobs:
           && docker-compose up -d --build'
 
       - name: Remove dangling containers
-        run: ssh my-vm 'docker image prune && y'
+        run: ssh my-vm 'docker rmi $(docker images --quiet --filter "dangling=true")'
 
       - name: Container Status
         run: >
