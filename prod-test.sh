@@ -21,11 +21,11 @@ for PAGE in $PAGES; do
 for METHOD in $METHODS; do
 
 GETVAR=$(curl -LI $URL$PAGE -o /dev/null -w '%{http_code}\n' -s -X $METHOD) 
-if [[ $GETVAR == 2.* ]]; then
+if [ $GETVAR == 2.* ]; then
 echo $PAGE $METHOD $GETVAR'SUCCESS'
-elif [[ $GETVAR == 418 ]]; then
+elif [ $GETVAR == 418 ]; then
 echo $PAGE $METHOD $GETVAR "I'm a teapot"
-elif [[ $GETVAR == 405 ]]; then 
+elif [ $GETVAR == 405 ]; then 
 echo $PAGE $METHOD $GETVAR 'METHOD NOT ALLOWED'
 else
 echo $PAGE $METHOD $GETVAR 'ERROR'
@@ -37,7 +37,7 @@ done
 # Function to post endpoints
 testing_endpoint () {
 GETVAR=$1
-if [[ $GETVAR == $2 ]]; then
+if [ $GETVAR == $2 ]; then
 echo $GETVAR 'SUCCESS'
 else
 echo $GETVAR 'ERROR'
