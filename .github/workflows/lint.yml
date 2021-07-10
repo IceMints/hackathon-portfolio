@@ -29,7 +29,7 @@
 #         uses: wearerequired/lint-action@v1
 #         exclude: "migrations/"
 #         run: |
-#           flake8_args="--ignore=w291, E302"
+#           flake8_args="--ignore=W291, E302"
 #         with:
 #           black: true
 #           flake8: true
