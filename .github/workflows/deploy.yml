@@ -49,3 +49,7 @@ jobs:
           ssh my-vm 'cd ${{ secrets.PROJECT_ROOT }}
           && curl -s -X POST "${{ secrets.DISCORD_WEBHOOK }}" 
           -d "content=🚀 Deployment Successful"'
+
+      - name: Bash Test Script
+        uses: actions/checkout@v2
+        run: sh ./prod-test.sh
