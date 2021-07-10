@@ -40,4 +40,12 @@ jobs:
           && docker-compose up -d --build'
 
       - name: Container Status
-        run: ssh my-vm 'cd ${{ secrets.PROJECT_ROOT }} && docker-compose ps
+        run: >
+          ssh my-vm 'cd ${{ secrets.PROJECT_ROOT }} 
+          && docker-compose ps'
+
+      - name: Discord Notification
+        run: >
+          ssh my-vm 'cd ${{ secrets.PROJECT_ROOT }}
+          && curl -s -X POST "${{ secrets.DISCORD_WEBHOOK }}" 
+          -d "content=🚀 Deployment Successful"
