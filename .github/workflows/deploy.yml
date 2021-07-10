@@ -54,4 +54,4 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: run a test Script
-        run: sh ./prod-test.sh
+        run: bash ./prod-test.sh
