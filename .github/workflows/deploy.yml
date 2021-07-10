@@ -50,6 +50,8 @@ jobs:
           && curl -s -X POST "${{ secrets.DISCORD_WEBHOOK }}" 
           -d "content=🚀 Deployment Successful"'
 
-      - name: Bash Test Script
-        uses: actions/checkout@v2
+      # Checks-out your repository under $GITHUB_WORKSPACE, so jobs can access it
+      - uses: actions/checkout@v2
+
+      - name: run a test Script
         run: sh ./prod-test.sh
