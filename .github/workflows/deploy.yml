@@ -49,12 +49,17 @@ jobs:
 
       - name: Discord Notification
         run: >
-          ssh my-vm 'cd ${{ secrets.PROJECT_ROOT }}
-          && curl -s -X POST "${{ secrets.DISCORD_WEBHOOK }}" 
-          -d "content=🚀 Deployment Successful"'
+          curl -s -X POST "${{ secrets.DISCORD_WEBHOOK }}" -d "content=🚀 Deployment Successful 🚀"'
 
       # Checks-out your repository under $GITHUB_WORKSPACE for jobs to access
+        name: Check Out Repo
       - uses: actions/checkout@v2
 
       - name: run a test Script
         run: bash ./prod-test.sh
+
+      # backup step runs when the previous step of a job fails
+      - name: My backup step
+        if: ${{ failure() }}
+        run: 
+          curl -s -X POST "${{ secrets.DISCORD_WEBHOOK }}" -d "content=🚫 Deployment Failed 🚫"'
