@@ -12,7 +12,6 @@ jobs: # what actions to run
   run-linters:
     name: Run linters # name of the job
     runs-on: ubuntu-latest
-    exclude: "migrations/"
 
     steps:
       - name: Check out Git repository
@@ -32,6 +31,9 @@ jobs: # what actions to run
       
       - name: Run linters
         uses: wearerequired/lint-action@v1
+        rules:
+          exclude:
+            - "migrations/"
  
         with:
           black: true
