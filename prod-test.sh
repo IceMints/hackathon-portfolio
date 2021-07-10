@@ -21,8 +21,7 @@ for PAGE in $PAGES; do
 for METHOD in $METHODS; do
 
 GETVAR=$(curl -LI $URL$PAGE -o /dev/null -w '%{http_code}\n' -s -X $METHOD) 
-STATCAT=${GETVAR:0:1}
-if [[ $STATCAT == 2 ]]; then
+if [[ $GETVAR == 2.* ]]; then
 echo $PAGE $METHOD $GETVAR'SUCCESS'
 elif [[ $GETVAR == 418 ]]; then
 echo $PAGE $METHOD $GETVAR "I'm a teapot"
