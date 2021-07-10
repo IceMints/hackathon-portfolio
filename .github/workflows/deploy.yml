@@ -52,7 +52,6 @@ jobs:
           curl -s -X POST "${{ secrets.DISCORD_WEBHOOK }}" -d "content=🚀 Deployment Successful 🚀"'
 
       # Checks-out your repository under $GITHUB_WORKSPACE for jobs to access
-        name: Check Out Repo
       - uses: actions/checkout@v2
 
       - name: run a test Script
@@ -61,5 +60,5 @@ jobs:
       # backup step runs when the previous step of a job fails
       - name: My backup step
         if: ${{ failure() }}
-        run: 
+        run: |
           curl -s -X POST "${{ secrets.DISCORD_WEBHOOK }}" -d "content=🚫 Deployment Failed 🚫"'
