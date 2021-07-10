@@ -28,8 +28,6 @@ jobs: # what actions to run
       - name: Run linters
         uses: wearerequired/lint-action@v1
         exclude: "migrations/"
-        run: |
-          flake8_args="--ignore=W291, E302"
         with:
           black: true
           flake8: true
