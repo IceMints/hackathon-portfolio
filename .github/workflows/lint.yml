@@ -31,9 +31,6 @@ jobs: # what actions to run
       
       - name: Run linters
         uses: wearerequired/lint-action@v1
-        rules:
-          exclude:
-            - "migrations/"
  
         with:
           black: true
