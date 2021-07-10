@@ -124,25 +124,25 @@ def register():
 
 
 # @app.route("/login", methods=["GET", "POST"])
-def login():
-    if request.method == "POST":
-        username = request.form.get("username")
-        password = request.form.get("password")
-        error = None
-        user = UserModel.query.filter_by(username=username).first()
+# def login():
+#     if request.method == "POST":
+#         username = request.form.get("username")
+#         password = request.form.get("password")
+#         error = None
+#         user = UserModel.query.filter_by(username=username).first()
 
-        if user is None:
-            error = "Incorrect username."
-        elif password is None:
-            error = "Incorrect password."
-        elif not check_password_hash(user.password, password):
-            error = "Incorrect password."
-        if error is None:
-            return "Login Successful", 200
-        else:
-            return error, 418
+#         if user is None:
+#             error = "Incorrect username."
+#         elif password is None:
+#             error = "Incorrect password."
+#         elif not check_password_hash(user.password, password):
+#             error = "Incorrect password."
+#         if error is None:
+#             return "Login Successful", 200
+#         else:
+#             return error, 418
 
-    return render_template("login.html", title="Login")
+#     return render_template("login.html", title="Login")
 
 
 @app.route("/<username>/home")
