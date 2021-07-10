@@ -78,4 +78,5 @@ testing_endpoint "$(curl -sX POST -d "username=test" POST $URL'/login')" "Incorr
 echo ${cyan}Posting to /login endpoint with registered user and correct password${reset_color}
 testing_endpoint "$(curl -sX POST -d "username=test&password=test" POST $URL'/login')" "Login Successful"
 
+echo 'Exit status = '$exitstatus
 exit $exitstatus
