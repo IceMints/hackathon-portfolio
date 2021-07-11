@@ -49,7 +49,7 @@ jobs:
 
       - name: Discord Notification
         run: >
-          curl -s -X POST "${{ secrets.DISCORD_WEBHOOK }}" -d "content=🚀 Deployment Successful 🚀"
+          curl -s -X POST "${{ secrets.DISCORD_WEBHOOK }}" -d "content=⌛ Deploying ⌛"
 
       # Checks-out your repository under $GITHUB_WORKSPACE for jobs to access
       - uses: actions/checkout@v2
@@ -62,3 +62,8 @@ jobs:
         if: ${{ failure() }}
         run: |
           curl -s -X POST "${{ secrets.DISCORD_WEBHOOK }}" -d "content=🚫 Deployment Failed 🚫"
+        
+      - name: Job has succeeded
+        if: ${{ success() }}
+        run: |
+          curl -s -X POST "${{ secrets.DISCORD_WEBHOOK }}" -d "content=🚀 Deployment Success 🚀"
