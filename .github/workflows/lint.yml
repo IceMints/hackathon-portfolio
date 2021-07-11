@@ -34,7 +34,7 @@ jobs: # what actions to run
         with:
           black: true
           flake8: true
-          auto_fix: true
+          #auto_fix: true
           
 
       - name: Setup buildx
