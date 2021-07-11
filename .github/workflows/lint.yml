@@ -27,14 +27,13 @@ jobs: # what actions to run
         run: |
           python -m pip install --upgrade pip
           pip install black flake8
-          flake8 --ignore E501 \
-                 --exclude migrations 
 
       - name: Run linters
         uses: wearerequired/lint-action@v1
         with:
           black: true
           flake8: true
+          max-line-length: "100"
           auto_fix: true
 
       - name: Setup buildx
