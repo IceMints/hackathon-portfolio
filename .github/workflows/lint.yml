@@ -33,6 +33,7 @@ jobs: # what actions to run
         with:
           black: true
           flake8: true
+          flake8_args: "--max-line-length 90"
           auto_fix: true
           
 
