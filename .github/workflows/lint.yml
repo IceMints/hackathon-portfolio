@@ -33,7 +33,7 @@ jobs: # what actions to run
         with:
           black: true
           flake8: true
-            max-line-length: "100"
+          max-line-length: "100"
           auto_fix: true
 
       - name: Setup buildx
