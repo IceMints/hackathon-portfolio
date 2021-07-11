@@ -34,7 +34,7 @@ jobs: # what actions to run
           black: true
           flake8: true
           auto_fix: true
-          flake8_command_prefix: max-line-length = 99
+          flake8_command_prefix: flake8 --max-line-length=99
 
       - name: Setup buildx
         uses: docker/setup-buildx-action@v1
