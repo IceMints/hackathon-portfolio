@@ -27,13 +27,13 @@ jobs: # what actions to run
         run: |
           python -m pip install --upgrade pip
           pip install black flake8
-          flake8 --ignore=E501 migrations/
 
       - name: Run linters
         uses: wearerequired/lint-action@v1
         with:
           black: true
           flake8: true
+          ignore: E501
 
       - name: Setup buildx
         uses: docker/setup-buildx-action@v1
