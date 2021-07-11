@@ -8,7 +8,7 @@
 # white=`tput setaf 7`
 # cyan=`tput setaf 6`
 # reset_color=`tput sgr0`
-exitstatus=0
+EXITSTATUS=0
 
 # website data
 URL="https://weepingmelon.duckdns.org"
@@ -30,7 +30,7 @@ elif [[ $GETVAR == 405 ]]; then
 echo $PAGE ${white}$METHOD${reset_color} $GETVAR ${yellow}'METHOD NOT ALLOWED'${reset_color}
 else
 echo $PAGE ${white}$METHOD${reset_color} $GETVAR ${red}'ERROR'${reset_color}
-exitstatus=1
+EXITSTATUS=1
 fi
 done
 done
@@ -42,7 +42,7 @@ if [[ $GETVAR == $2 ]]; then
 echo $GETVAR ${green}'SUCCESS'${reset_color}
 else
 echo $GETVAR ${red}'ERROR'${reset_color}
-exitstatus=2
+EXITSTATUS=2
 fi
 }
 
@@ -78,5 +78,5 @@ testing_endpoint "$(curl -sX POST -d "username=test" POST $URL'/login')" "Incorr
 echo ${cyan}Posting to /login endpoint with registered user and correct password${reset_color}
 testing_endpoint "$(curl -sX POST -d "username=test&password=test" POST $URL'/login')" "Login Successful"
 
-echo 'Exit status = '$exitstatus
-exit $exitstatus
+echo 'EXIT STATUS = '$EXITSTATUS
+exit $EXITSTATUS
