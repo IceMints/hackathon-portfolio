@@ -10,6 +10,7 @@ jobs:
   deploy:
     name: "Deploy to AWS EC2 Virtual Machine"
     runs-on: ubuntu-latest
+
     steps:
       # Setup Docker Build X
       - name: Setup buildx
@@ -72,7 +73,8 @@ jobs:
         if: ${{ failure() }}
         run: |
           curl -s -X POST "${{ secrets.DISCORD_WEBHOOK }}" -d "content=🚫 Deployment Failed 🚫"
-        
+
+      # reports a successful build  
       - name: Job has succeeded
         if: ${{ success() }}
         run: |
