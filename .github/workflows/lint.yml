@@ -37,13 +37,3 @@ jobs: # what actions to run
           flake8: true
           flake8_args: "--max-line-length 99"
           auto_fix: true
-          
-      # Setup Docker Build X
-      - name: Setup buildx
-        uses: docker/setup-buildx-action@v1
-        with:
-          install: true
-
-      - name: Docker buildx test
-        run: |
-          docker build .
