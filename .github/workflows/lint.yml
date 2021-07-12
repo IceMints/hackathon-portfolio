@@ -15,6 +15,7 @@ jobs: # what actions to run
     runs-on: ubuntu-latest
 
     steps:
+      # Checkout the code base
       - name: Check out Git repository
         uses: actions/checkout@v2
 
@@ -28,6 +29,7 @@ jobs: # what actions to run
           python -m pip install --upgrade pip
           pip install black flake8
 
+      # Run Linter against code base
       - name: Run linters
         uses: wearerequired/lint-action@v1
         with:
@@ -36,7 +38,7 @@ jobs: # what actions to run
           flake8_args: "--max-line-length 99"
           auto_fix: true
           
-
+      # Setup Docker Build X
       - name: Setup buildx
         uses: docker/setup-buildx-action@v1
         with:
