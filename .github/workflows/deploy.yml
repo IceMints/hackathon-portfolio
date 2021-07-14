@@ -50,22 +50,23 @@ jobs:
 
       - name: Discord Notification
         run: >
-          curl -s -X POST "${{ secrets.DISCORD_WEBHOOK }}" -d "content=⌛ Deploying https://weepingmelon.duckdns.org/ ⌛"
+          curl -s -X POST "${{ secrets.DISCORD_WEBHOOK }}" -d "content=⌛ Deploying ⌛"
 
       # Checks-out your repository under $GITHUB_WORKSPACE for jobs to access
-      - uses: actions/checkout@v2
+      - name:  Check out Git repository
+        uses: actions/checkout@v2
 
-      - name: run a test Script
+      - name: test deployment
         run: bash ./prod-test.sh
 
-      # backup step runs when the previous step of a job fails
-      - name: My backup step
+      # reports a successful build  
+      - name: Discord success notification
+        if: ${{ success() }}
+        run: |
+          curl -s -X POST "${{ secrets.DISCORD_WEBHOOK }}" -d "content=🚀 Deployment Success 🚀 https://weepingmelon.duckdns.org/"
+
+        # backup step runs when the previous step of a job fails
+      - name: Discord failure notification
         if: ${{ failure() }}
         run: |
           curl -s -X POST "${{ secrets.DISCORD_WEBHOOK }}" -d "content=🚫 Deployment Failed 🚫"
-
-      # reports a successful build  
-      - name: Job has succeeded
-        if: ${{ success() }}
-        run: |
-          curl -s -X POST "${{ secrets.DISCORD_WEBHOOK }}" -d "content=🚀 Deployment Success 🚀"
