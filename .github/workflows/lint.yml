@@ -34,6 +34,6 @@ jobs: # what actions to run
         uses: wearerequired/lint-action@v1
         with:
           black: true
+          auto_fix: true
           flake8: true
           flake8_args: "app/ --max-line-length 99"
-          auto_fix: true
