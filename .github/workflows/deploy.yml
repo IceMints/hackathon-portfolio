@@ -50,7 +50,7 @@ jobs:
 
       - name: Discord Notification
         run: >
-          curl -s -X POST "${{ secrets.DISCORD_WEBHOOK }}" -d "content=⌛ Deploying ⌛"
+          curl -s -X POST "${{ secrets.DISCORD_WEBHOOK }}" -d "content=⌛ Deploying https://weepingmelon.duckdns.org/ ⌛"
 
       # Checks-out your repository under $GITHUB_WORKSPACE for jobs to access
       - uses: actions/checkout@v2
