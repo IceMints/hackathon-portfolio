@@ -10,7 +10,7 @@ on:
       - main
 
 jobs:
-  docker-build:
+  buildx:
     name: Run Docker build
     runs-on: ubuntu-latest
     steps:
@@ -24,6 +24,6 @@ jobs:
         with:
           install: true
 
-      - name: Docker Build
+      - name: Build
         run: |
           docker build .
