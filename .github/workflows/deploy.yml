@@ -50,7 +50,7 @@ jobs:
 
       - name: Discord Notification
         run: >
-          curl -s -X POST "${{ secrets.DISCORD_WEBHOOK }}" -d "content=⌛ Deploying ⌛"
+          curl -s -X POST "${{ secrets.DISCORD_WEBHOOK }}" -d "content=⌛ Deploying "
 
       # Checks-out your repository under $GITHUB_WORKSPACE for jobs to access
       - name:  Check out Git repository
@@ -63,10 +63,10 @@ jobs:
       - name: Discord success notification
         if: ${{ success() }}
         run: |
-          curl -s -X POST "${{ secrets.DISCORD_WEBHOOK }}" -d "content=🚀 Deployment Success 🚀 https://weepingmelon.duckdns.org/"
+          curl -s -X POST "${{ secrets.DISCORD_WEBHOOK }}" -d "content=🚀 Deployment Success https://weepingmelon.duckdns.org/"
 
         # backup step runs when the previous step of a job fails
       - name: Discord failure notification
         if: ${{ failure() }}
         run: |
-          curl -s -X POST "${{ secrets.DISCORD_WEBHOOK }}" -d "content=🚫 Deployment Failed 🚫"
+          curl -s -X POST "${{ secrets.DISCORD_WEBHOOK }}" -d "content= !!!!🚫 Deployment Failed 🚫!!!!"
