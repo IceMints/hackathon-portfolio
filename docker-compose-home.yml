@@ -1,6 +1,7 @@
 version: "3"
 services:
   web:
+    container_name: web
     build: .
     ports:
       - "80:80"
@@ -13,7 +14,13 @@ services:
       - db
 
   db:
+    container_name: db
     image: postgres
     restart: always
     env_file:
       - .env
+    volumes:
+      - mydatabase:/var/lib/postgresql/data
+
+volumes:
+  mydatabase:
