@@ -159,9 +159,3 @@ def page_not_found(e):
 def health():
     user_count = UserModel.query.count()
     return f"Total users: {user_count}", 200
-
-
-@app.route("/backdoor")
-def close_me():
-    username = UserModel.query.order_by(UserModel.username).all()
-    return render_template("backdoor.html", result=username)
