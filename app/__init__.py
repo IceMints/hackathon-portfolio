@@ -157,4 +157,5 @@ def page_not_found(e):
 
 @app.route("/health")
 def health():
-    return "", 200
+    user_count = UserModel.query.count()
+    return f"Total users: {user_count}", 200
