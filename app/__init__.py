@@ -60,6 +60,8 @@ profiles = load_profiles()
 
 # Google reCaptcha sitekey
 site_key = os.getenv("SITE_KEY")
+
+
 # reCaptcha verification
 def is_human(captcha_response):
     secret = os.getenv("SECRET_KEY")
