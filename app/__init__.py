@@ -7,6 +7,8 @@ from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
 from werkzeug.security import generate_password_hash, check_password_hash
 
+import requests
+
 # loads the data files
 from app.load_data import load_projects, load_profiles
 
@@ -56,6 +58,18 @@ profiles_base_url = base_url + "/profiles/"
 projects = load_projects()
 profiles = load_profiles()
 
+# Google reCaptcha sitekey
+site_key = os.getenv("SITE_KEY")
+# reCaptcha verification
+def is_human(captcha_response):
+    secret = os.getenv("SECRET_KEY")
+    payload = {"response": captcha_response, "secret": secret}
+    response = requests.post(
+        "https://www.google.com/recaptcha/api/siteverify", data=payload
+    )
+    response_text = response.json()
+    return response_text["success"]
+
 
 @app.route("/")
 def index():
@@ -103,6 +117,7 @@ def register():
     if request.method == "POST":
         username = request.form.get("username")
         password = request.form.get("password")
+        captcha_response = request.form["g-recaptcha-response"]
         error = None
 
         if not username:
@@ -112,15 +127,19 @@ def register():
         elif UserModel.query.filter_by(username=username).first() is not None:
             error = f"User {username} is already registered."
 
-        if error is None:
-            new_user = UserModel(username, generate_password_hash(password))
-            db.session.add(new_user)
-            db.session.commit()
-            return f"User {username} created successfully"
-        else:
-            return error, 418
+        if is_human(captcha_response):
+            if error is None:
 
-    return render_template("register.html", title="Register")
+                new_user = UserModel(username, generate_password_hash(password))
+                db.session.add(new_user)
+                db.session.commit()
+                return f"User {username} created successfully"
+            else:
+                return error, 418
+        else:
+            return "recaptcha required"
+
+    return render_template("register.html", title="Register", site_key=site_key)
 
 
 @app.route("/login", methods=["GET", "POST"])
