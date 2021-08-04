@@ -46,24 +46,24 @@ EXITSTATUS=2
 fi
 }
 
-# Testing /register endpoint with post
-echo ${cyan}Testing register endpoint ${reset_color}
-testing_endpoint "$(curl -sX POST $URL'/register')" "Username is required."
+# # Testing /register endpoint with post
+# echo ${cyan}Testing register endpoint ${reset_color}
+# testing_endpoint "$(curl -sX POST $URL'/register')" "Username is required."
 
-echo ${cyan}Posting to URL with username ${reset_color}
-testing_endpoint "$(curl -sX POST -d "username=testing" $URL'/register')" "Password is required."
+# echo ${cyan}Posting to URL with username ${reset_color}
+# testing_endpoint "$(curl -sX POST -d "username=testing" $URL'/register')" "Password is required."
 
-# Set username to test
-USERNAME=test
+# # Set username to test
+# USERNAME=test
 
-echo ${cyan}Posting an existing username and password ${reset_color}
-testing_endpoint "$(curl -sX POST -d "username=$USERNAME&password=test" $URL'/register')" "User test is already registered."
+# echo ${cyan}Posting an existing username and password ${reset_color}
+# testing_endpoint "$(curl -sX POST -d "username=$USERNAME&password=test" $URL'/register')" "User test is already registered."
 
-# Creates a random user to be created
-COUNT=$((1 + $RANDOM % 1000000))
+# # Creates a random user to be created
+# COUNT=$((1 + $RANDOM % 1000000))
 
-echo ${cyan}Posting with new username and password ${reset_color}
-testing_endpoint "$(curl -sX POST -d "username=$USERNAME$COUNT&password=test" $URL'/register')" "User $USERNAME$COUNT created successfully"
+# echo ${cyan}Posting with new username and password ${reset_color}
+# testing_endpoint "$(curl -sX POST -d "username=$USERNAME$COUNT&password=test" $URL'/register')" "User $USERNAME$COUNT created successfully"
 
 # Testing /login endpoint with post
 echo ${cyan}Posting to /login endpoint ${reset_color}
