@@ -141,7 +141,7 @@ def register():
             else:
                 return error, 418
         else:
-            return f"reCAPTCHA required."
+            return "reCAPTCHA required."
 
     return render_template("register.html", title="Register", site_key=site_key)
 
