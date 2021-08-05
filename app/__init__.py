@@ -119,7 +119,10 @@ def register():
     if request.method == "POST":
         username = request.form.get("username")
         password = request.form.get("password")
-        captcha_response = request.form["g-recaptcha-response"]
+        try:
+            captcha_response = request.form["g-recaptcha-response"]
+        except KeyError:
+            return "Captcha Required"
         error = None
 
         if not username:
@@ -131,7 +134,6 @@ def register():
 
         if is_human(captcha_response):
             if error is None:
-
                 new_user = UserModel(username, generate_password_hash(password))
                 db.session.add(new_user)
                 db.session.commit()
@@ -139,7 +141,7 @@ def register():
             else:
                 return error, 418
         else:
-            return "recaptcha required"
+            return f"reCAPTCHA required."
 
     return render_template("register.html", title="Register", site_key=site_key)
 

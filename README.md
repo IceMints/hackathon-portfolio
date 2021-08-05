@@ -25,6 +25,17 @@ instance with docker containers.
 
 ![page_2](https://user-images.githubusercontent.com/51943194/121791614-af3abc00-cba0-11eb-9976-d6ecb0f0b7de.png)
 
+## Installation
+
+Make sure you have python3 and pip installed
+
+
+Create and activate virtual environment using virtualenv
+```bash
+$ python -m venv python3-virtualenv
+$ source python3-virtualenv/bin/activate
+```
+
 ## Pre-requisites / requirements
 
 - Use the package manager [pip](https://pip.pypa.io/en/stable/) to install all dependencies
@@ -44,16 +55,7 @@ pip install -r requirements.txt
 - sqlite
 
 
-## Installation
 
-Make sure you have python3 and pip installed
-
-
-Create and activate virtual environment using virtualenv
-```bash
-$ python -m venv python3-virtualenv
-$ source python3-virtualenv/bin/activate
-```
 
 ## Usage
 
