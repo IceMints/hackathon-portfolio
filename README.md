@@ -3,8 +3,9 @@
  <img width="460" src="https://user-images.githubusercontent.com/51943194/121562739-98dd0680-c9ce-11eb-897a-579780e50c9a.jpg">
 </p>
 
-# Sourced from Team KENARGI Portfolio Webpage https://devpost.com/software/kenargi-portfolio 
+# Sourced from Team KENARGI Portfolio Webpage 
 by Armando, Gigi(Me), and Kendra in Pod 3.3.5
+https://devpost.com/software/kenargi-portfolio 
 
 ## Introduction
 
