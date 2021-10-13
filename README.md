@@ -10,7 +10,7 @@ https://devpost.com/software/kenargi-portfolio
 
 ## Introduction
 
-Design a portfolio-blog
+Design a portfolio-blog in a team of 3. Then fork the project and improve and curtail to an individual portfolio-blog.
 
 ## Description
 
